@@ -29,10 +29,10 @@ You need:
 2. Optional local noise files for robustness testing.
 
 Default archive path expected by the project:
-`D:\CVprojects\project\speech_commands_v0.02.tar.gz`
+`D:\...\speech_commands_v0.02.tar.gz`
 
 Local noise folder expected by the robustness script:
-`D:\CVprojects\DL-Project\data\noise_samples`
+`D:\...\data\noise_samples`
 
 Example noise files already supported:
 - `Babble_1.wav`
