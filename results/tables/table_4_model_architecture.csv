@@ -1,0 +1,22 @@
+Layer,Type,Output Shape,Parameters
+1,InputLayer,"(None, 98, 40, 1)",0
+2,Conv2D,"(None, 98, 40, 32)",320
+3,BatchNormalization,"(None, 98, 40, 32)",128
+4,ReLU,"(None, 98, 40, 32)",0
+5,MaxPooling2D,"(None, 49, 20, 32)",0
+6,Conv2D,"(None, 49, 20, 64)",18496
+7,BatchNormalization,"(None, 49, 20, 64)",256
+8,ReLU,"(None, 49, 20, 64)",0
+9,MaxPooling2D,"(None, 24, 10, 64)",0
+10,Conv2D,"(None, 24, 10, 128)",73856
+11,BatchNormalization,"(None, 24, 10, 128)",512
+12,ReLU,"(None, 24, 10, 128)",0
+13,MaxPooling2D,"(None, 12, 5, 128)",0
+14,Conv2D,"(None, 12, 5, 128)",147584
+15,BatchNormalization,"(None, 12, 5, 128)",512
+16,ReLU,"(None, 12, 5, 128)",0
+17,GlobalAveragePooling2D,"(None, 128)",0
+18,Dropout,"(None, 128)",0
+19,Dense,"(None, 128)",16512
+20,Dropout,"(None, 128)",0
+21,Dense,"(None, 12)",1548

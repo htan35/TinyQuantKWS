@@ -1,0 +1,4 @@
+Experiment,Features,Augmentation,Epochs,Train Split,Test Accuracy,Macro F1,Notes
+E1,Log-mel spectrogram,Yes,12,33406,0.9074231386184692,Fill after macro F1 calc,Current pilot run
+E2,Log-mel spectrogram,Yes,12,Full split,Run full training,Run full training,Main final result
+E3,Log-mel spectrogram,No,12,Full split,Optional,Optional,Ablation

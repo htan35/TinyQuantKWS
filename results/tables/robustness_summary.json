@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    "clean",
+    "20",
+    "10",
+    "0",
+    "-5"
+  ],
+  "models": [
+    "float32",
+    "int8",
+    "int4"
+  ],
+  "report_dir": "D:\\CVprojects\\DL-Project\\artifacts\\reports",
+  "results_table_dir": "D:\\CVprojects\\DL-Project\\results\\tables",
+  "generated_files": [
+    "robustness_results.csv",
+    "robustness_accuracy_table.csv",
+    "robustness_latency_table.csv",
+    "robustness_drop_table.csv",
+    "deployment_summary_table.csv",
+    "noise_variation_table.csv"
+  ]
+}

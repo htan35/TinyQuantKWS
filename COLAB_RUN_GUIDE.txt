@@ -1,0 +1,84 @@
+GOOGLE COLAB RUN GUIDE FOR DL-PROJECT
+====================================
+
+This file explains how to run the project on Google Colab.
+
+1. Upload the project to Google Drive or upload the project zip manually in Colab.
+2. Upload or place the Speech Commands archive somewhere accessible, for example:
+   /content/drive/MyDrive/speech_commands_v0.02.tar.gz
+3. Upload a few local noise files if you want to run robustness evaluation, for example:
+   /content/DL-Project/data/noise_samples/Babble_1.wav
+   /content/DL-Project/data/noise_samples/Cafe_1.wav
+
+RECOMMENDED COLAB WORKFLOW
+--------------------------
+
+A. Mount Drive
+
+from google.colab import drive
+drive.mount('/content/drive')
+
+B. Go into the project directory
+
+%cd /content
+
+If the repo is zipped:
+!unzip -q /content/drive/MyDrive/DL-Project.zip -d /content/
+%cd /content/DL-Project
+
+If the repo is in Drive already:
+%cd /content/drive/MyDrive/DL-Project
+
+C. Install dependencies
+
+!pip install -r requirements_colab.txt
+
+D. Train the baseline model
+
+!python train.py --archive /content/drive/MyDrive/speech_commands_v0.02.tar.gz --epochs 3 --limit-train 6000 --limit-val 1200 --limit-test 1200
+
+For a larger run:
+
+!python train.py --archive /content/drive/MyDrive/speech_commands_v0.02.tar.gz --epochs 12
+
+E. Evaluate the baseline model
+
+!python evaluate.py --archive /content/drive/MyDrive/speech_commands_v0.02.tar.gz
+
+F. Export TFLite models
+
+!python quantize.py --archive /content/drive/MyDrive/speech_commands_v0.02.tar.gz
+
+G. Run robustness evaluation
+
+!python evaluate_robustness.py --archive /content/drive/MyDrive/speech_commands_v0.02.tar.gz --noise-dir /content/DL-Project/data/noise_samples --limit-test 100
+
+For the full run:
+
+!python evaluate_robustness.py --archive /content/drive/MyDrive/speech_commands_v0.02.tar.gz --noise-dir /content/DL-Project/data/noise_samples
+
+IMPORTANT NOTES
+---------------
+
+1. In Colab, always override the --archive path unless you place the dataset exactly where src/config.py expects it.
+2. The noise samples folder is optional for baseline training, but required for robustness evaluation.
+3. The Int4 TFLite export path is experimental and may behave differently depending on the TensorFlow version available in Colab.
+4. Main output files are saved inside:
+   /content/DL-Project/artifacts/
+   or
+   /content/drive/MyDrive/DL-Project/artifacts/
+   depending on where you ran the project.
+
+FILES TO CHECK AFTER RUNNING
+----------------------------
+
+- artifacts/models/best_model.keras
+- artifacts/models/model_float32.tflite
+- artifacts/models/model_int8.tflite
+- artifacts/models/model_int4.tflite
+- artifacts/reports/metrics.json
+- artifacts/reports/classification_report.txt
+- artifacts/reports/robustness_accuracy_table.csv
+- artifacts/reports/deployment_summary_table.csv
+- artifacts/plots/training_history.png
+- artifacts/plots/confusion_matrix.png

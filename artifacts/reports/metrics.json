@@ -1,0 +1,42 @@
+{
+  "test_loss": 0.28447675704956055,
+  "test_accuracy": 0.9074231386184692,
+  "sklearn_accuracy": 0.907423117709438,
+  "train_examples": 33406,
+  "val_examples": 9198,
+  "test_examples": 9430,
+  "labels": [
+    "yes",
+    "no",
+    "up",
+    "down",
+    "left",
+    "right",
+    "on",
+    "off",
+    "stop",
+    "go",
+    "unknown",
+    "silence"
+  ],
+  "label_to_index": {
+    "yes": 0,
+    "no": 1,
+    "up": 2,
+    "down": 3,
+    "left": 4,
+    "right": 5,
+    "on": 6,
+    "off": 7,
+    "stop": 8,
+    "go": 9,
+    "unknown": 10,
+    "silence": 11
+  },
+  "input_shape": [
+    98,
+    40,
+    1
+  ],
+  "epochs_completed": 12
+}

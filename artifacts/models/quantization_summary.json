@@ -1,0 +1,12 @@
+{
+  "keras_model": "D:\\CVprojects\\DL-Project\\artifacts\\models\\best_model.keras",
+  "outputs": {
+    "float32": "D:\\CVprojects\\DL-Project\\artifacts\\models\\model_float32.tflite",
+    "int8": "D:\\CVprojects\\DL-Project\\artifacts\\models\\model_int8.tflite",
+    "int4": "D:\\CVprojects\\DL-Project\\artifacts\\models\\model_int4.tflite"
+  },
+  "int4_metadata": {
+    "status": "ok",
+    "flags": "_experimental_low_bit_qat, _experimental_reduce_type_precision"
+  }
+}

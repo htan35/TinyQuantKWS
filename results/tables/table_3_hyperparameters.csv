@@ -1,0 +1,13 @@
+Hyperparameter,Value
+Sample rate,16000
+Clip length (samples),16000
+Frame length,480
+Frame step,160
+FFT length,512
+Mel bins,40
+Batch size,64
+Configured epochs,12
+Unknown ratio,0.25
+Silence ratio,0.1
+Target command classes,"yes, no, up, down, left, right, on, off, stop, go"
+All labels,"yes, no, up, down, left, right, on, off, stop, go, unknown, silence"

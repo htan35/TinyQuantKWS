@@ -1,0 +1,3 @@
+Run Type,Train Used,Validation Used,Test Used,Epochs Completed
+Pilot run,33406,9198,9430,12
+Full run,Run python train.py --epochs 12,Full validation split,Full test split,12

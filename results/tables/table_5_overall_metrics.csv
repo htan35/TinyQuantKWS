@@ -1,0 +1,6 @@
+Metric,Value
+Test loss,0.28447675704956055
+Test accuracy,0.9074231386184692
+Sklearn accuracy,0.907423117709438
+Epochs completed,12
+Input shape,98 x 40 x 1

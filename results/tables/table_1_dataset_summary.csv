@@ -1,0 +1,4 @@
+Split,Samples,Classes,Notes
+Train,33406,12,Includes unknown and silence
+Validation,9198,12,Official validation split
+Test,9430,12,Official test split
