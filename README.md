@@ -40,6 +40,7 @@ Example noise files already supported:
 - `Traffic_1.wav`
 - `AirConditioner_1.wav`
 
+Create a "data" subfolder and extract it.
 ## Step-by-Step: Run Locally in VS Code Terminal
 
 Open the project folder in VS Code and make sure the terminal is already inside:
